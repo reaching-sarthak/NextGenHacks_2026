@@ -21,7 +21,7 @@ BIAS_SHAPE = (OUTPUT_NEURONS,)
 
 def initialize_parameters(seed: int = 42) -> tuple:
     """
-    Initialize the trainable parameters of Dense1.
+    Initialize the trainable parameters of Dense128.
 
     Architecture:
         128 inputs -> 128 outputs
@@ -94,7 +94,7 @@ def validate_input(input_vector: np.ndarray) -> None:
 # FORWARD PASS
 # ============================================================
 
-def forward(
+def dense128_forward(
     input_vector: np.ndarray,
     W: np.ndarray,
     b: np.ndarray
@@ -188,7 +188,7 @@ def forward(
 # BACKWARD PASS
 # ============================================================
 
-def backward(
+def dense128_backward(
     upstream_gradient: np.ndarray,
     input_vector: np.ndarray,
     W: np.ndarray
